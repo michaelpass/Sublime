@@ -1,0 +1,15 @@
+{
+    "anaconda_linting": false,
+
+    "swallow_startup_errors": true,
+
+    "complete_parameters": false,
+
+    "pep8": false,
+
+    "mypy": true,
+
+    "complete_all_parameters": false,
+
+    "enable_signatures_tooltip": false
+}

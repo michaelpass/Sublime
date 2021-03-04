@@ -1,0 +1,6 @@
+{
+	"compile_lang": false,
+	"lang_id": "en",
+	"port_id": "/dev/cu.usbserial-1410",
+	"programmer_id": "avrmkii"
+}

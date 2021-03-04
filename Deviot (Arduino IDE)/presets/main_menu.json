@@ -1,0 +1,360 @@
+[
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "Deviot",
+                        "children":
+                        [
+                            {
+                                "caption": "Settings",
+                                "command": "edit_settings", 
+                                "args": {
+                                    "base_file": "${packages}/Deviot (Arduino IDE)/deviot.sublime-settings",
+                                    "default": "[\n\t$0\n]\n"
+                                }
+                            },
+                            {"caption": "-"},
+                            {
+                                "caption": "Key Bindings",
+                                "command": "edit_settings", 
+                                "args": {
+                                    "base_file": "${packages}/Deviot (Arduino IDE)/shortcuts/Default ($platform).sublime-keymap",
+                                    "default": "[\n\t$0\n]\n"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "caption": "Deviot",
+        "mnemonic": "D",
+        "id": "deviot",
+        "children":
+        [            
+            {
+                "caption": "menu_quick_panel",
+                "command": "show_overlay",
+                "args": {"overlay": "command_palette", "text": "Deviot: "}
+            },{
+                "caption": "menu_new_sketch",
+                "id": "menu_new_sketch",
+                "command": "deviot_new_sketch"
+            },
+            {"caption": "-"},
+            {
+                "caption": "menu_select_boards",
+                "command": "deviot_select_boards",
+                "id": "deviot_select_board"
+            },{
+                "caption": "menu_select_env",
+                "command": "deviot_select_environment",
+                "id": "deviot_select_environment"
+            },
+            {"caption": "-"},
+            {
+                "caption": "menu_search_lib",
+                "id": "search_library",
+                "command": "deviot_search_library"
+            },{
+                "caption": "menu_update_lib",
+                "id": "update_library",
+                "command": "deviot_update_library"
+            },{
+                "caption": "menu_remove_lib",
+                "id": "remove_library",
+                "command": "deviot_remove_library"
+            },{
+                "caption": "menu_import_library",
+                "id": "import_library",
+                "command": "deviot_import_library"
+            },{
+                "caption": "menu_library_examples",
+                "id": "library_examples",
+                "command": "deviot_library_examples"
+            },{
+                "caption": "menu_option_lib",
+                "id": "library_options",
+                "children": [
+                                {
+                                    "caption":"menu_open_lib_folder",
+                                    "command":"deviot_open_library_folder"
+                                },{
+                                    "caption":"menu_rebuild_lib_list",
+                                    "command":"deviot_rebuild_lib_list"
+                                },{
+                                    "caption":"menu_extra_lib_folder",
+                                    "command":"deviot_extra_library_folder"
+                                },{
+                                    "caption":"menu_remove_extra_lib_folder",
+                                    "command":"deviot_remove_extra_library_folder"
+                                }
+                            ]
+            },
+            {"caption": "-"},
+            {
+                "caption": "menu_build",
+                "id": "build_sketch",
+                "command": "deviot_compile_sketch"
+            },{
+                "caption": "menu_upload",
+                "id": "menu_upload",
+                "command": "deviot_upload_sketch"
+            },{
+                "caption": "menu_clean",
+                "id": "clean_sketch",
+                "command": "deviot_clean_sketch"
+            },{
+                "caption": "menu_compile_options",
+                "id": "compile_options",
+                "children": [
+                                {
+                                    "caption": "menu_overwrite_upload_baud",
+                                    "id": "menu_overwrite_upload_baud",
+                                    "command": "deviot_overwrite_upload_baud"
+                                },{
+                                    "caption": "menu_freeze_sketch",
+                                    "id": "freeze_sketch",
+                                    "checkbox": true,
+                                    "command": "deviot_freeze_sketch"
+                                },{
+                                    "caption": "menu_pio_untouch",
+                                    "id": "pio_untouch",
+                                    "checkbox": true,
+                                    "command": "deviot_pio_untouch"
+                                },{
+                                    "caption": "menu_open_ini_file",
+                                    "id": "open_ini_file",
+                                    "command": "deviot_open_ini_file"
+                                }                
+                ]
+            },{
+                "caption": "menu_show_console",
+                "id": "show_console",
+                "command": "deviot_show_console"
+            },{
+                "caption": "menu_hide_console",
+                "id": "hide_console",
+                "command": "deviot_hide_console"
+            },
+            {"caption": "-"},
+            {
+                "caption": "menu_show_terminal",
+                "id": "show_terminal",
+                "command": "deviot_show_terminal"
+            },
+            {
+                "caption": "menu_hide_terminal",
+                "id": "hide_terminal",
+                "command": "deviot_hide_terminal"
+            },
+            {"caption": "-"},
+            {
+                "caption": "menu_programmer",
+                "id": "menu_programmer",
+                "children":
+                [
+                    {
+                        "caption": "None",
+                        "checkbox": true,
+                        "args": {"programmer_item": false},
+                        "command": "deviot_choose_programmer"
+                    },{
+                        "caption": "AVR ISP",
+                        "checkbox": true,
+                        "args": {"programmer_item": "avr"},
+                        "command": "deviot_choose_programmer"
+                    },{
+                        "caption": "AVRISP mkII",
+                        "checkbox": true,
+                        "args": {"programmer_item": "avrmkii"},
+                        "command": "deviot_choose_programmer"
+                    },{
+                        "caption": "USBtinyISP",
+                        "checkbox": true,
+                        "args": {"programmer_item": "usbtiny"},
+                        "command": "deviot_choose_programmer"
+                    },{
+                        "caption": "ArduinoISP",
+                        "checkbox": true,
+                        "args": {"programmer_item": "arduinoisp"},
+                        "command": "deviot_choose_programmer"
+                    },{
+                        "caption": "USBasp",
+                        "checkbox": true,
+                        "args": {"programmer_item": "usbasp"},
+                        "command": "deviot_choose_programmer"
+                    },{
+                        "caption": "Parallel Programmer",
+                        "checkbox": true,
+                        "args": {"programmer_item": "parallel"},
+                        "command": "deviot_choose_programmer"
+                    },{
+                        "caption": "Arduino as ISP",
+                        "checkbox": true,
+                        "args": {"programmer_item": "arduinoasisp"},
+                        "command": "deviot_choose_programmer"
+                    }
+                ]
+            },
+            {"caption": "-"},
+            {
+                "caption": "menu_serial_port",
+                "id": "deviot_serial_port",
+                "command": "deviot_select_port"
+            },
+            {
+                "caption": "menu_auth_change",
+                "id": "auth_change",
+                "command": "deviot_set_password"
+            },
+            {
+                "caption": "menu_monitor_serial",
+                "id": "serial_monitor",
+                "children":
+                [
+                    {
+                        "caption": "menu_run",
+                        "id": "serial_monitor_run",
+                        "command": "deviot_toggle_serial_monitor",
+                        "checkbox": true
+                    },
+                    {
+                        "caption": "menu_send",
+                        "id": "send_message_serial",
+                        "command": "deviot_send_serial_monitor"
+                    },
+                    {
+                        "caption": "menu_send_persistent",
+                        "id": "deviot_send_persistent",
+                        "command": "deviot_send_persistent"
+                    },
+                    {
+                        "caption": "menu_clean_view", 
+                        "command": "deviot_clean_console", 
+                        "id": "clean_console"
+                    },
+                    {
+                        "caption": "menu_deviot_output",
+                        "id": "deviot_output",
+                        "command": "deviot_output_console"
+                    },
+                    {
+                        "caption": "menu_auto_scroll",
+                        "id": "auto_scroll_monitor",
+                        "command": "deviot_automatic_scroll"
+                    },{
+                        "caption": "menu_auto_clean",
+                        "id": "auto_clean_monitor",
+                        "command": "deviot_auto_clean"
+                    },
+                    {
+                        "caption": "menu_baudrate",
+                        "id": "baudrate_item",
+                        "command": "deviot_choose_baudrate"
+                    },
+                    {
+                        "caption": "menu_line_ending",
+                        "id": "line_ending_item",
+                        "command": "deviot_choose_line_ending"
+                    },
+                    {
+                        "caption": "menu_display_mode",
+                        "id": "display_mode_item",
+                        "command": "deviot_choose_display_mode"
+                    }
+                ]
+            },
+            {"caption": "-"},
+            {
+                "caption": "menu_option",
+                "id":"options",
+                "children": [
+                                {
+                                    "caption":"menu_upgrade_pio",
+                                    "command":"deviot_upgrade_pio"
+                                },
+                                {
+                                    "caption":"menu_developer_pio",
+                                    "checkbox":true,
+                                    "command":"deviot_developer_pio"
+                                },
+                                {
+                                    "caption":"menu_always_native",
+				                    "checkbox":true,
+                                    "command":"deviot_pio_structure"
+                                },
+                                {
+                                    "caption":"menu_rebuild_boards",
+                                    "command":"deviot_rebuild_boards"
+                                },
+                                {"caption": "-"},
+                                {
+                                    "caption":"menu_show_verbose",
+                                    "checkbox":true,
+                                    "command":"deviot_verbose_output"
+                                },
+                                {"caption": "-"},
+                                {
+                                    "caption":"menu_status_information",
+                                    "checkbox":true,
+                                    "command":"deviot_status_information"
+                                },
+                                {
+                                    "caption":"menu_open_build_folder",
+                                    "command":"deviot_open_build_folder"
+                                },
+                                {
+                                    "caption":"menu_change_build_folder",
+                                    "command":"deviot_change_build_folder"
+                                },
+                                {
+                                    "caption":"menu_use_cpp_new",
+                                    "command":"deviot_cpp_file"
+                                },
+                                {
+                                    "caption":"menu_rebuild_syntax",
+                                    "command":"deviot_rebuild_syntax"
+                                },
+                                {
+                                    "caption":"menu_remove_settings",
+                                    "command":"deviot_remove_settings"
+                                }
+                            ]
+            },{
+                "caption": "menu_languages",
+                "command": "deviot_languages",
+                "id":"deviot_languages"
+            },{
+                "caption": "menu_donate_deviot",
+                "command": "deviot_donate"
+            },{
+                "caption": "menu_about",
+                "id": "menu_about",
+                "children": [                        
+                                {
+                                    "caption": "menu_about_deviot",
+                                    "command": "deviot_about"
+                                },
+                                {
+                                    "caption": "menu_about_pio",
+                                    "command": "deviot_pio_about"
+                                }
+
+                            ]
+            }
+        ]
+    }
+]

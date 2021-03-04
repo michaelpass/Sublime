@@ -1,0 +1,22 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Anaconda",
+		"arduino-cli",
+		"Deviot (Arduino IDE)",
+		"Material Theme",
+		"MIPS Syntax",
+		"Package Control",
+		"Print to HTML",
+		"SublimeLinter",
+		"SublimeLinter-pycodestyle",
+		"SublimeLinter-pyflakes",
+		"SublimeLinter-pylint",
+		"SublimeREPL",
+		"Theme - Brogrammer"
+	]
+}

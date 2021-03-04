@@ -1,0 +1,1 @@
+{"version": "2.2.2", "description": "Sublime Text plugin for IoT development based in PlatformIO ecosystem (Arduino IDE)", "url": "https://github.com/gepd/Deviot", "platforms": ["*"], "dependencies": [], "sublime_text": ">=3000"}
